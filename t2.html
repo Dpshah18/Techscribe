@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <h1>Bruce essay generator</h1>
+    
+
+    <!-- Tutorial stuff
+    <p>This is a paragraph! Here's how you make a linB: <a href="https://neocities.org">Neocities</a>.</p>
+
+    <p>Here's how you can make <strong>bold</strong> and <em>italic</em> text.</p>
+
+    <p>Here's how you can add an image:</p>
+    <img src="/neocities.png">
+
+    <p>Here's how to make a list:</p>
+
+    <ul>
+      <li>First thing</li>
+      <li>Second thing</li>
+      <li>Third thing</li>
+    </ul>
+    <p>To learn more HTML/CSS, check out these <a href="https://neocities.org/tutorials">tutorials</a>!</p>
+    
+    <form>
+  <label for="email">Enter your email (for essay generator to work can be school email)</label>
+  <input type="email" id="email" name="email" placeholder="bob.jackson@stu.austinisd.org">
+  <input type="submit" value="Submit">
+    </form>
+  -->
+   <div class="slidecontainer">
+  <p>Randomness:</p>
+  <input type="range" min="0" max="100" value="10" name="tempature"> 
+  </div>
+  
+  <div class="slidecontainer">
+  <p>Length:</p>
+  <input type="range" min="0" max="100" value="10" name="length">
+  </div>
+  
+  <div class="slidecontainer">
+  <p>Accuracy:</p>
+  <input type="range" min="0" max="100" value="10" name="top_P">
+  </div>
+  
+  <div class="slidecontainer">
+  <p>Repitition:</p>
+  <input type="range" min="0" max="100" value="10" name="frequency_P">
+  </div>
+  
+  <div class="slidecontainer">
+  <p>Focus:</p>
+  <input type="range" min="0" max="100" value="10" name="presence_P">
+  </div>
+    
+  
+    
+    <br><br><form>
+  <label for="ai_Level">AI level:</label>
+  <select name="ai_Level" id="ai_Level">
+    <option value="ada">dumb</option>
+    <option value="babbage">smart</option>
+    <option value="curie">genius</option>
+    <option value="davinci">Bruce</option>
+  </select>
+  <br><br>
+</form>
+
+    
+  <form>
+  <label for="text">Enter API key:</label>
+  <input type="text" id="apikey" name="apikey" placeholder="sk-OHEfdsfssd">
+  <input type="submit" value="Save">
+  <a href="2.html">Get API key</a>
+    </form>
+  
+  
+  <br><br><br><textarea rows = "30" cols = "150" placeholder="Enter text here... do NOT end with a space" name="work_Area"></textarea>
+  
+  <br><button name="activate">Generate</button>
+    
+  </body>
+</html>
+
+<!-- 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 -->

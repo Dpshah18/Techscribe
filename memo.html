@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Techscrïbe</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        #memo-container {
+            width: 92%;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #memo {
+            border: 1px solid #ccc;
+            padding: 20px;
+            position: relative;
+        }
+
+        .highlighted {
+            background-color: yellow;
+        }
+
+        .mistake-container {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            background-color: yellow;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .mistake-text {
+            margin: 0;
+        }
+
+        .mistake-arrow {
+            display: none;
+            position: absolute;
+            font-size: 20px;
+            color: yellow;
+            z-index: 0;
+        }
+
+        #next-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #c06c04;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #next-button:hover {
+            background-color: #0056b3;
+        }
+        #download-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #c06c04;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #download-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="m-0">Techscrïbe</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Formats</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="letter.html" class="dropdown-item">Letter</a>
+                                <a href="email.html" class="dropdown-item">Email</a>
+                                <a href="memo.html" class="dropdown-item">Memo</a>
+                                <a href="resume.html" class="dropdown-item">Resume</a>
+                                <a href="sop.html" class="dropdown-item">SOP</a>
+                                <a href="user.html" class="dropdown-item">User Manual</a>
+                                <a href="report.html" class="dropdown-item">Report</a>
+                                <a href="press.html" class="dropdown-item">Press release</a>
+                                <a href="proposal.html" class="dropdown-item">Proposal</a>
+                            </div>
+                        </div>
+                        <a href="calculator.html" class="nav-item nav-link">Calculator</a>
+                    </div>
+                    <a href="" class="btn btn-light rounded-pill text-primary py-2 px-4 ms-lg-5">SCRÏBE </a>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container">
+                <h1 style="text-align: center;">Memo</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <div id="memo-container">
+            <h1>Memo</h1>
+            <div id="memo">
+                <p>
+                    To: All Staff<br>
+                    Date: Oct 15, 20<br>
+                    From: Management Team<br>
+                    Subject: Important Meeting
+                </p>
+                <div class="mistake-container" style="top: 50px; left: 150px;">
+                    <div class="mistake-arrow" style="top: -10px; left: 10px;">&#9650;</div>
+                    <p class="mistake-text">Mistake: Incorrect Date Format - The original memo uses an ambiguous date format ("Oct 15, 20") that can lead to confusion. Also Subject should be capitalized.</p>
+                </div>
+                <p>
+                    Hey,
+                </p>
+                <div class="mistake-container" style="top: 90px; left: 150px;">
+                    <div class="mistake-arrow" style="top: -10px; left: 10px;">&#9650;</div>
+                    <p class="mistake-text">Mistake: Incomplete Sign-off - The sign-off "Best" is used in the original memo and is not suitable for a formal memo. The corrected version uses a more professional closing.</p>
+                </div>
+                <p>
+                    There's an important meeting happening on the 17th in the break room. Make sure 2 prepare ur notes and come prepared. We'll talk about the project. 
+                </p>
+                <div class="mistake-container" style="top: 150px; left: 150px;">
+                    <div class="mistake-arrow" style="top: -10px; left: 10px;">&#9650;</div>
+                    <p class="mistake-text">Mistake: Use of Abbreviations - The original memo uses abbreviations such as "2" for "to" and "ur" for "your." </p>
+                </div>
+                <p>
+                    Be there or else!
+                </p>
+                <div class="mistake-container" style="top: 210px; left: 150px;">
+                    <div class="mistake-arrow" style="top: -10px; left: 10px;">&#9650;</div>
+                    <p class="mistake-text">Mistake: Ambiguity - The phrase "Be there or else!" is confrontational and should be replaced with a more professional tone in the corrected version.</p>
+                </div>
+            </div>
+
+    </div>
+            <button id="next-button">Next</button>
+        </div>
+    
+        <script>
+            // JavaScript to control memo correction and next button
+            const mistakeContainers = document.querySelectorAll('.mistake-container');
+            const mistakeArrows = document.querySelectorAll('.mistake-arrow');
+            const nextButton = document.getElementById('next-button');
+    
+            let currentIndex = -1;
+    
+            // Hide all mistake highlights initially
+            mistakeContainers.forEach((container) => {
+                container.style.display = 'none';
+            });
+    
+            // Define the list of mistakes and corrections for the memo
+            const mistakes = [
+                "Incorrect Date Format",
+                "Incomplete Sign-off",
+                "Use of Abbreviations",
+                "Ambiguity",
+            ];
+    
+            // Corresponding corrected content for the memo
+            const correctedMemo = [
+                "TO: All Staff<br>DATE: October 15, 20XX <br> FROM: [Your Full Name or Department]<br>SUBJECT: PROJECT MEETING ON 17TH OCTOBER",
+                "Dear Team,",
+                "We would like to inform you about an upcoming crucial meeting scheduled for the 17th in the break room. We kindly request that you prepare your notes and come prepared as we will be discussing the project.",
+                "Your presence at the meeting is expected, and your preparation is appreciated.",
+                "Thank you for your cooperation.<br>Sincerely,<br>[Your Full Name]<br>[Your Title or Department]",
+                "Sincerely,<br>[Your Full Name]<br>[Your Title or Department]",
+            ];
+           
+            nextButton.addEventListener('click', () => {
+                // Hide the previous displayed mistake, if any
+                if (currentIndex >= 0) {
+                    mistakeContainers[currentIndex].style.display = 'none';
+                    mistakeArrows[currentIndex].style.display = 'none';
+                }
+    
+                // Show the next mistake, if available
+                if (currentIndex < mistakes.length - 1) {
+                    currentIndex++;
+    
+                    // Show the current mistake
+                    mistakeContainers[currentIndex].style.display = 'block';
+                    mistakeArrows[currentIndex].style.display = 'block';
+                    
+                    // Delay the correction by 1 second
+                    setTimeout(() => {
+                        // Update the memo content with the corrected version for the current mistake
+                        document.querySelector("#memo p:nth-child(" + (currentIndex * 2 + 1) + ")").innerHTML = correctedMemo[currentIndex];
+                    }, 1000);
+                } else {
+                    // Hide the "Next" button when all mistakes are shown.
+                    nextButton.style.display = 'none';
+                }
+            });
+        </script>
+     
+        <!-- About End -->
+        <p class="centr">Click the button to download a sample file:</p>
+        <a href="https://docs.google.com/document/d/1zFhwzNmJJt1Id2x9nZXMdFphh2oEP8j-2C2n5yhdaKo/edit" download="sample-file.docx">
+            <button class="download-button">Download word Doc</button>
+
+       
+
+
+       
+
+
+
+        
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+   
+</body>
+
+</html>
